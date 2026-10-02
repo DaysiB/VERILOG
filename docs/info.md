@@ -17,6 +17,4 @@ Connect the Tiny Tapeout board to a 25.175 MHz clock source, pull the rst_n pin 
 
 ## External hardware
 
-TinyVGA PMOD: Connected to output ports uo_out[7:0] for RGB signal lines, hsync, and vsync.
 
-VGA Monitor / Capture Card: Connected via standard VGA cable to the TinyVGA PMOD.
