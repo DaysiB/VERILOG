@@ -9,12 +9,14 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This project is a hardware-only (no CPU, no RAM, no GPU) VGA demoscene generator designed for Tiny Tapeout that renders a 640x480 @ 60Hz video stream directly on-the-fly by "racing the beam" using purely digital logic gates: the hvsync_generator module tracks horizontal (x) and vertical (y) pixel coordinates alongside standard timing signals, while the letters D-A-Y-S-I are decoded on-the-fly through spatial combinational logic without a font ROM, procedural radial functions generate flower petal geometries and smiley face coordinates, and a 6-bit TinyVGA color signal (R[1:0], G[1:0], B[1:0]) outputs a vibrant pink and golden yellow palette.
 
 ## How to test
 
-Explain how to use your project
+Connect the Tiny Tapeout board to a 25.175 MHz clock source, pull the rst_n pin low briefly to reset the frame counter, hook up a standard VGA monitor to the output, and watch the visual demo automatically cycle through sequential scene parts featuring the "DAYSI" banner, procedural flowers, tunnel zooms, and smiley faces.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+TinyVGA PMOD: Connected to output ports uo_out[7:0] for RGB signal lines, hsync, and vsync.
+
+VGA Monitor / Capture Card: Connected via standard VGA cable to the TinyVGA PMOD.
